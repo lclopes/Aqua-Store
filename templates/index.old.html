@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <link href="assets/css/all.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
+   <title>Bootstrap</title>
+</head>
+
+<body>
+   <nav class="navbar navbar-light bg-light navbar-expand-md fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="#">
+            <img src="assets/images/Rio-Turismo.png" style="width: 90px;" alt="Rio Turismo">
+         </a>
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav mr-auto">
+               <a class="nav-link nav-item" href="#passeios">Passeios</a>
+               <a class="nav-link nav-item" href="#excursoes">Excursões</a>
+               <div class="dropdown">
+                  <a class="nav-link nav-item dropdown-toggle" data-toggle="dropdown" href="#">Passeios Culturais</a>
+
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="#">Museus</a>
+                     <a class="dropdown-item" href="#">Feiras</a>
+                     <a class="dropdown-item" href="#">Bibliotecas</a>
+                     <a class="dropdown-item" href="#">Livrarias</a>
+                  </div>
+               </div>
+               <a class="nav-link nav-item" href="#reserva" data-toggle="modal">Reservas</a>
+               <a class="nav-link nav-item" href="#header">Contato</a>
+            </div>
+
+            <div class="navbar-nav">
+               <a class="nav-link nav-item" href="#pedidos">Meus Pedidos</a>
+               <a class="nav-link nav-item" href="#janelamodal">
+                  <i class="fas fa-sign-in-alt"></i> Entrar
+               </a>
+            </div>
+
+         </div>
+      </div>
+   </nav>
+   <!--
+   <img style="margin-top: 69px;" src="assets/images/panoramica1.jpg">
+   -->
+   <header style="margin-top: 69px;" class="bgimage d-none d-md-block mb-4"></header>
+
+   <div class="modal fade" id="reserva">
+      <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="modal-title font-weight-bold">Reserva de Passeios e Excursões</span>
+            </div>
+            <div class="modal-body">
+               <form novalidate action="">
+                  <fieldset>
+                     <legend class="font-weight-bold">Informações Pessoais</legend>
+                     <div class="form-group row">
+                        <label for="nome" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Nome</label>
+                        <div class="col-lg-10">
+                           <input required type="text" class="form-control form-control-sm"
+                              placeholder="Informe seu nome" name="nome" id="nome">
+                           <div class="invalid-feedback">
+                              Este campo deve ser preenchido.
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label class="col-form-label col-lg-2  text-lg-right font-weight-bold">Sexo</label>
+                        <div class="col-lg-10">
+                           <div class="form-check">
+                              <input type="radio" class="form-check-input is-invalid" name="sexo" id="sexo-masc"
+                                 value="M">
+                              <label class="form-check-label" for="sexo-masc">Masculino</label>
+                           </div>
+                           <div class="form-check">
+                              <input type="radio" class="form-check-input is-invalid" name="sexo" id="sexo-fem"
+                                 value="F">
+                              <label class="form-check-label" for="sexo-fem">Feminino</label>
+                           </div>
+                           <div class="invalid-feedback d-block">
+                              Este campo deve ser preenchido.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group row">
+                        <label for="endereco"
+                           class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço</label>
+                        <div class="col-lg-10">
+                           <input type="text" class="form-control form-control-sm is-valid" name="endereco"
+                              id="endereco">
+                           <div class="invalid-feedback">
+                              Este campo deve ser preenchido.
+                           </div>
+                        </div>
+                     </div>
+                  </fieldset>
+
+                  <fieldset>
+                     <legend class="font-weight-bold">Informações de Passeios e excursões</legend>
+
+                     <div class="form-group row">
+                        <label for="passeio"
+                           class="col-form-label col-lg-2 text-lg-right font-weight-bold">Passeio</label>
+                        <div class="col-lg-10">
+                           <select class="form-control form-control-sm" name="passeio" id="passeio">
+                              <option value="">-- Selecione um passeio --</option>
+                              <option value="1">Ciclovia</option>
+                              <option value="2">Copacabana</option>
+                              <option value="3">Cristo Redentor</option>
+                              <option value="4">Arcos da Lapa</option>
+                              <option value="5">Pão de Açucar</option>
+                              <option value="6">Maracanã</option>
+                           </select>
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label for="passeios"
+                           class="col-form-label col-lg-2 text-lg-right font-weight-bold">Passeios</label>
+                        <div class="col-lg-10">
+                           <select class="form-control form-control-sm" size="5" name="passeios" id="passeios">
+                              <option value="1">Ciclovia</option>
+                              <option value="2">Copacabana</option>
+                              <option value="3">Cristo Redentor</option>
+                              <option value="4">Arcos da Lapa</option>
+                              <option value="5">Pão de Açucar</option>
+                              <option value="6">Maracanã</option>
+                           </select>
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <label class="col-form-label col-lg-2 text-lg-right font-weight-bold">Excursões</label>
+                        <div class="col-lg-10">
+                           <div class="form-check">
+                              <input type="checkbox" class="form-check-input" name="ilha" id="ilha">
+                              <label class="form-check-label" for="ilha">Ilha Grande</label>
+                           </div>
+                           <div class="form-check">
+                              <input type="checkbox" class="form-check-input" name="paraty" id="paraty">
+                              <label class="form-check-label" for="paraty">Paraty</label>
+                           </div>
+                           <div class="form-check">
+                              <input type="checkbox" class="form-check-input" name="buzios" id="buzios">
+                              <label class="form-check-label" for="buzios">Buzios e Arraial do Cabo</label>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="form-group row">
+                        <div class="col-lg-10 offset-lg-2">
+                           <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                     </div>
+                  </fieldset>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div style="margin-top: 89px;" class="jumbotron d-block d-md-none text-center mb-4">
+         <h5>Empresa especializada em passeios e excursões no estado do Rio de Janeiro.</h5>
+         <br>
+         <h5>Veja abaixo os passeios mais solicitados pelos nossos clientes.</h5>
+      </div>
+      <h4 id="passeios" class="mb-3">Nossos Passeios</h4>
+      <div class="row mb-4">
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+               <img src="assets/images/p-ciclovia.jpg" alt="Ciclovias">
+               <div class="card-body">
+                  <h5 class="card-title text-center">Ciclovias da Cidade</h5>
+                  <p class="text-warning font-weight-bold text-center">Passeio diário</p>
+                  <p class="text-justify">O Rio possui uma extensa malha de ciclovias. As principais vias começam
+                     na Marina da Glória, próxima ao centro da Cidade, passando por toda a
+                     Zona Sul até o Leblon.</p>
+               </div>
+               <div class="card-footer text-right">
+                  <button type="button" class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+               <img src="assets/images/p-copacabana.jpg" alt="Copacabana">
+               <div class="card-body">
+                  <h5 class="card-title text-center">Praia de Copacabana</h5>
+                  <p class="text-warning font-weight-bold text-center">Passeio terças e quintas</p>
+                  <p class="text-justify">Copacabana que é também conhecida como
+                     <a href="#" onclick="return false;" data-trigger="hover" data-toggle="tooltip" data-placement="top"
+                        data-html="true" title="<b>Tom Jobim:</b> <br>
+                               Copacabana, princesinha do mar<br>
+                               Pelas manhãs tu és a vida a cantar<br>
+                               E a tardinha o sol poente<br>
+                               Deixa sempre uma saudade na gente">
+                        "Princesinha do Mar"</a>
+
+                     em função de uma famosa canção em sua homenagem, é um dos locais
+                     mais conhecidos do Brasil e do mundo.</p>
+               </div>
+               <div class="card-footer text-right">
+                  <button type="button" class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+               <img src="assets/images/p-cristo-redentor.jpg" alt="Cristo Redentor">
+               <div class="card-body">
+                  <h5 class="card-title text-center">Cristo Redentor</h5>
+                  <p class="text-warning font-weight-bold text-center">Passeio diário</p>
+                  <p class="text-justify">Entre os principais pontos turísticos da cidade, estão o Corcovado, com a
+                     estátuado Cristo Redentor e o Pão de açucar. Ambos fornecem uma vista
+                     magnifíca da cidade.</p>
+               </div>
+               <div class="card-footer text-right">
+                  <button type="button" class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+               <img src="assets/images/p-arcos-da-lapa.jpg" alt="Lapa">
+               <div class="card-body">
+                  <h5 class="card-title text-center">Arcos da Lapa</h5>
+                  <p class="text-warning font-weight-bold text-center">Passeio diário</p>
+                  <p class="text-justify">A Lapa é dos locais noturnos mais conhecidos do Rio. É super democrático, rico
+                     em diversidade e abriga todas as tribos. Lá podemos encontrar bons restaurantes
+                     e bares, alguns com música ao vivo e muita concentração de jovens.</p>
+               </div>
+               <div class="card-footer text-right">
+                  <button type="button" class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+               <img src="assets/images/p-maracana.jpg" alt="Maracanã">
+               <div class="card-body">
+                  <h5 class="card-title text-center">Maracanã</h5>
+                  <p class="text-warning font-weight-bold text-center">Passeio semanal</p>
+                  <p class="text-justify">Construído para abrigar a Copa do Mundo de 1950, vencida pelo Uruguai, o
+                     Maracanã
+                     já foi o maior estádio de futebol do mundo, mas perdeu este status em reforma
+                     recente. Visitá-lo, especialmente em dias de jogos, pode ser algo inesquecível.</p>
+               </div>
+               <div class="card-footer text-right">
+                  <button type="button" class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="card mb-3">
+               <img src="assets/images/p-pao-de-acucar.jpg" alt="Pão de Açucar">
+               <div class="card-body">
+                  <h5 class="card-title text-center">Pão de açucar</h5>
+                  <p class="text-warning font-weight-bold text-center">Passeio diário</p>
+                  <p class="text-justify">Localizado no bairro da Urca, o bondinho é uma das principais atrações
+                     turísticas
+                     da cidade. Liga a Praia Vermelha ao morro da Urca e ao morro do Pão de açúcar. O
+                     bondinho foi cenário do filme
+                     <a tabindex="0" data-trigger="hover" data-toggle="popover"
+                        data-title="007 contra o Foguete da Morte" data-placement="bottom" data-content="Filme franco-britânico de acção, 
+                     aventura, espionagem e ficção científica de 1979, 
+                     o 11º da série James Bond com Roger Moore no papel 
+                     do agente secreto.">007 contra o Foguete da Morte</a>,
+                     de 1979.</p>
+               </div>
+               <div class="card-footer text-right">
+                  <button type="button" class="btn btn-outline-primary">Mais informações...</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <h4 id="excursoes" class="mb-3">Nossas Excursões</h4>
+      <div class="accordion mb-4" id="id-accordion">
+         <div class="card">
+            <div class="card-header" id="header-ilha">
+               <h5 class="mb-0">
+                  <a href="#id-ilha" data-toggle="collapse" aria-expanded="true" aria-controls="id-ilha">
+                     Ilha Grande
+                  </a>
+               </h5>
+            </div>
+            <div id="id-ilha" class="collapse show" aria-labelledby="header-ilha" data-parent="#id-accordion">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="media">
+                           <img src="assets/images/e-vila-abraao.jpg" alt="Vila do abraão">
+                           <div class="media-body">
+                              <h5>Vila do abraão</h5>
+                              <span class="texto-media-body">É o principal local de chegada à Ilha Grande.
+                                 Lá você encontra pousadas, campings, restaurantes, etc.</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="media">
+                           <img class="img-fluid" src="assets/images/e-lagoa-azul.jpg" alt="Lagoa azul">
+                           <div class="media-body">
+                              <h5>Lagoa azul</h5>
+                              <span class="texto-media-body">Um local muito lindo com água azul turquesa
+                                 e muitos peixes. Só é possível chegar lá de barco.</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="media">
+                           <img src="assets/images/e-praia-do-aventureiro.jpg" alt="Praia do aventureiro">
+                           <div class="media-body">
+                              <h5>Praia do aventureiro</h5>
+                              <span class="texto-media-body">Um a das mais bonitas da Ilha Grande.
+                                 A praia mede 600 metros e o mar é ótimo para a prática do Surf.</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="media">
+                           <img src="assets/images/e-lopes-mendes.jpg" alt="Lopes Mendes">
+                           <div class="media-body">
+                              <h5>Lopes Mendes</h5>
+                              <span class="texto-media-body">A mais famosa praia da Ilha Grande. São 3 km
+                                 de areia muito branca e água cristalina.</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <button type="button" class="btn btn-outline-primary btn-block">Mais Informações...</button>
+                  <a href="contratar.html" class="btn btn-outline-secondary btn-block">Contratar</a>
+               </div>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-header" id="header-paraty">
+               <h5 class="mb-0">
+                  <a href="#id-paraty" data-toggle="collapse" aria-expanded="false" aria-controls="id-paraty">
+                     Paraty
+                  </a>
+               </h5>
+            </div>
+            <div id="id-paraty" class="collapse" aria-labelledby="header-paraty" data-parent="#id-accordion">
+               <div class="card-body">
+                  Texto sobre Paraty
+               </div>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-header" id="header-buzios">
+               <h5 class="mb-0">
+                  <a href="#id-buzios" data-toggle="collapse" aria-expanded="false" aria-controls="id-buzios">
+                     Buzios e Arraial do Cabo
+                  </a>
+               </h5>
+            </div>
+            <div id="id-buzios" class="collapse" aria-labelledby="header-buzios" data-parent="#id-accordion">
+               <div class="card-body">
+                  Texto sobre Buzios e Arraial do Cabo
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <h4 class="mb-3">Depoimentos sobre Excursões</h4>
+      <div class="row mb-4">
+         <div class="col-lg-6">
+            <blockquote class="blockquote">
+               <p>Adipisci veritatis esse expedita odit neque quam! Repellat
+                  quas ad cum porro amet, maiores, dolores in magni ea enim. Commodi
+                  quidem consequuntur animi pariatur cumque distinctio.</p>
+               <div class="blockquote-footer">
+                  Luis Gustavo Pereira Filho
+               </div>
+            </blockquote>
+         </div>
+         <div class="col-lg-6">
+            <blockquote class="blockquote">
+               <p>Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                  eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+               <div class="blockquote-footer">
+                  Sergio albuquerque
+               </div>
+            </blockquote>
+         </div>
+         <div class="col-lg-6">
+            <blockquote class="blockquote">
+               <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                  aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt.</p>
+               <div class="blockquote-footer">
+                  Pedro arnaldo Soares
+               </div>
+            </blockquote>
+         </div>
+      </div>
+      <br>
+      <br>
+   </div>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3 col-sm-6">
+               <h5>Nossas Excursões</h5>
+               <ul>
+                  <li><i>Baia da </i><a href='#excursoes'> Ilha Grande</a></li>
+                  <li><a href='#excursoes'>Paraty</a></li>
+                  <li><a href='#excursoes'>Búzios e arraial do Cabo</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <h5>Passeios</h5>
+               <ul>
+                  <li><a href='#'>Ciclovias</a></li>
+                  <li><a href='#'>Copacabana</a></li>
+                  <li><a href='#'>Cristo Redentor</a></li>
+                  <li><a href='#'>Pão de Açucar</a></li>
+                  <li><a href='#'>Maracanã</a></li>
+                  <li><a href='#'>Arcos da Lapa</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <h5>Passeios Culturais</h5>
+               <ul>
+                  <li><a href='#'>Museus</a></li>
+                  <li><a href='#'>Feiras</a></li>
+                  <li><a href='#'>Bibliotecas</a></li>
+                  <li><a href='#'>Livrarias</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <h5>Contato</h5>
+               <ul>
+                  <li>Joana</li>
+                  <li>(99)99999-9999</li>
+                  <li><a href='mailto:popo@pb.dum.br'>popo@pb.dum.br</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script src="assets/js/jquery-3.3.1.js"></script>
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.js"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+
+</html>
