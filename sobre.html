@@ -16,30 +16,38 @@
          <a class="navbar-brand" href="index.html">
             <img src="assets/images/water-icon.png" style="width: 105px;" alt="Aqua Store">
          </a>
-         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false"
-            aria-label="Botão de navegação">
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="menu">
 
+            <div class="navbar-nav mr-auto">
+               <div class="dropdown">
+                  <a class="nav-link nav-item dropdown-toggle" data-toggle="dropdown" href="#"><i
+                        class="fas fa-shopping-bag"></i> produtos</a>
+
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="tradicionais.html">águas tradicionais</a>
+                     <a class="dropdown-item" href="gourmet.html">águas gourmet</a>
+                     <a class="dropdown-item" href="outros.html">utilidades e outros</a>
+                  </div>
+               </div>
+            </div>
+
             <div class="navbar-nav ml-auto">
 
-               <a class="nav-link nav-item" href="encomenda.html">
-                  <i class="fas fa-shopping-bag"></i> Encomendar</a>
                <a class="nav-link nav-item" href="sobre.html">
-                  <i class="fas fa-info-circle"></i> Sobre nós
-               </a>
-               <a class="nav-link nav-item" href="contato.html">
-                  <i class="fas fa-mail-bulk"></i> Contato
+                  <i class="fas fa-info-circle"></i> sobre nós
                </a>
                <a class="nav-link nav-item" href="#pedidos">
-                  <i class="fas fa-shopping-cart"></i> Meus Pedidos</a>
+                  <i class="fas fa-shopping-cart"></i> meus pedidos</a>
                <a class="nav-link nav-item" href="#janelamodal">
-                  <i class="fas fa-sign-in-alt"></i> Entrar
+                  <i class="fas fa-sign-in-alt"></i> entrar
                </a>
                <a class="nav-link nav-item" href="#janelamodal">
-                  <i class="fas fa-user-plus"></i> Cadastro
-               </a>  
+                  <i class="fas fa-user-plus"></i> cadastro
+               </a>
             </div>
 
          </div>
@@ -48,51 +56,67 @@
    <!--
    <img style="margin-top: 69px;" src="assets/images/panoramica1.jpg">
    -->
-   <header style="margin-top: 30px;" class="bgimage d-none d-md-block shadow-sm p-3 mb-5"></header>
+
 
    <!-- inserir modal aqui-->
    <!-- FIM DO HEADER -->
-   <div class="container bg-white rounded shadow-lg p-3 mb-5">
-      <div class="jumbotron text-center mb-4 bg-white">
-         <h1>Quem somos?</h1>
-         <img src="assets/images/water-icon.png" alt="Logo">
-         <h5 style="margin-top: 10px">A Aqua Store é uma loja virtual de águas gourmet, fundada em 2019, pelo somellier de águas Luis Gustavo Pereira
-            Filho. A loja tem o objetivo de facilitar o acesso ao mundo das diversas águas gourmet e divulgar as diferentes
-            marcas do Brasil e do Mundo. </h5>
-      </div>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-         </ol>
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <img class="carousel d-block w-100" src="assets/images/carousel/fundo1.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-               <img class="carousel d-block w-100" src="assets/images/carousel/fundo2.jpg" alt="Second slide">
+
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner shadow">
+         <div class="carousel-item active">
+            <img class="carousel-inner-page d-block w-100" src="assets/images/water.jpg" alt="First slide">
+            <div class="carousel-caption carousel-inner-text d-none d-md-block">
+               <h1>Sobre nós.</h1>
+               <p>Um pouco da nossa história</p>
             </div>
          </div>
-
       </div>
-      <div style="margin-top: 30px" class="jumbotron text-center mb-4 bg-light">
-         <blockquote class="blockquote">
-            <p>Eu gostaria que todos tivessem acesso ao maravilhoso mundo das águas gourmet. Sendo um sommelier de águas, tive
-               acesso aos mais variados paladares de muitas águas ao redor do mundo, e através da Aqua Store, viso trazer
-               essa paixão à água para os brasileiros. Hidratem-se!
-            </p>
-            <div class="blockquote-footer">
-               Luis Gustavo Pereira Filho
-            </div>
-         </blockquote>
 
+   </div>
+
+   <div class="container bg-white rounded shadow-lg p-3 mb-5">
+      <h6 style="margin-top: 10px; text-align: center">A Aqua Store é uma loja virtual de águas, fundada em 2019, pelo
+         somellier
+         de águas Luis Gustavo Pereira
+         Filho. <br>
+
+         Nosso objetivo é levar para todos a saúde e a refrescância que apenas um bom copo d'água pode trazer. <br>
+         Boas compras!
+      </h6>
+
+      
+      <div class="jumbotron text-center mb-4 bg-white">
+         <h6 style="margin-top: 10px; text-align: justify">Em 2014, o então estudante de Ciência da Computação Luis
+            Gustavo Pereira Filho
+            foi apresentado ao mundo da degustação de águas gourmet. Inicialmente ele achou isso uma perda de tempo,
+            pois "como que
+            águas poderiam ter gostos distintos? É tudo água!" <br>
+            No entanto, o tempo se mostrou aliado de Luis, e pouco tempo depois, já dentro do universo das águas, teve a
+            ideia de
+            criar um site para apresentar as diferentes águas às pessoas do Brasil e do mundo. Assim, o embrião da Aqua
+            Store
+            estava nascendo.<br>
+            Logo, a Aqua Store passou a ter como objetivo vender água em geral, saindo apenas do nicho das águas
+            gourmet.
+
+         </h6>
       </div>
+      <h3 style="text-align: center">Degustação de águas gourmet</h3>
+      <br>
       <div class="embed-responsive embed-responsive-21by9">
          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/juf4EVFTNNE" allowfullscreen></iframe>
       </div>
-      <br>
+      <div style="margin-top: 30px" class="jumbotron text-center mb-4 bg-white">
+            <blockquote class="blockquote">
+               <p>Hidrate-se!
+               </p>
+               <div class="blockquote-footer">
+                  Luis Gustavo Pereira Filho
+               </div>
+            </blockquote>
+   
+         </div>
    </div>
-
    <footer class="footer">
       <div class="container">
          <div class="text-center">
