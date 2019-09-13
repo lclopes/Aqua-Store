@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <link href="assets/css/all.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
+   <title>Aqua Store</title>
+</head>
+
+<body class="bg-blue">
+   <nav class="navbar navbar-light bg-white navbar-expand-lg fixed-top border-bottom shadow-sm">
+      <div class="container">
+         <a class="navbar-brand" href="index.html">
+            <img src="assets/images/water-icon.png" style="width: 105px;" alt="Aqua Store">
+         </a>
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false"
+            aria-label="Botão de navegação">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="menu">
+
+            <div class="navbar-nav mr-auto">
+               <div class="dropdown">
+                  <a class="nav-link nav-item dropdown-toggle" data-toggle="dropdown" href="#">
+                     <i class="fas fa-shopping-bag"></i> produtos</a>
+
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="tradicionais.html">águas tradicionais</a>
+                     <a class="dropdown-item" href="gourmet.html">águas gourmet</a>
+                     <a class="dropdown-item" href="outros.html">utilidades e outros</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="navbar-nav ml-auto">
+
+               <a class="nav-link nav-item" href="sobre.html">
+                  <i class="fas fa-info-circle"></i> sobre nós
+               </a>
+               <a class="nav-link nav-item" href="#pedidos">
+                  <i class="fas fa-shopping-cart"></i> meus pedidos</a>
+               <a class="nav-link nav-item" href="#janelamodal">
+                  <i class="fas fa-sign-in-alt"></i> entrar
+               </a>
+               <a class="nav-link nav-item" href="cadastro.html">
+                  <i class="fas fa-user-plus"></i> cadastro
+               </a>
+            </div>
+
+         </div>
+      </div>
+   </nav>
+   
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner shadow">
+         <div class="carousel-item active">
+            <img class="carousel-inner-page d-block w-100" src="assets/images/refract.jpg" alt="First slide">
+            <div class="carousel-caption carousel-inner-text d-none d-md-block">
+               <h1>Cadastre-se.</h1>
+               <p>Faça seu cadastro para realizar suas compras conosco</p>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <!-- inserir modal aqui-->
+   
+
+   <div class="container bg-white shadow-lg p-3">
+      <!--TODO-->
+
+      <div class="modal-body">
+        <form novalidate action="">
+           <fieldset>
+              <legend class="font-weight-bold text-center p-3" >Informações Pessoais</legend>
+              <div class="form-group row">
+                 <label for="nome" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Nome</label>
+                 <div class="col-lg-10">
+                    <input required type="text" class="form-control form-control-sm" placeholder="Informe seu nome" name="nome" id="nome">
+                    <div class="invalid-feedback">
+                       Este campo deve ser preenchido.
+                    </div>
+                 </div>
+              </div>
+
+              <div class="form-group row">
+                 <label class="col-form-label col-lg-2  text-lg-right font-weight-bold">Sexo</label>
+                 <div class="col-lg-10">
+                    <div class="form-check">
+                       <input type="radio" class="form-check-input is-invalid" name="sexo" id="sexo-masc" value="M">
+                       <label class="form-check-label" for="sexo-masc">Masculino</label>
+                    </div>
+                    <div class="form-check">
+                       <input type="radio" class="form-check-input is-invalid" name="sexo" id="sexo-fem" value="F">
+                       <label class="form-check-label" for="sexo-fem">Feminino</label>
+                    </div>
+                    <div class="invalid-feedback d-block">
+                       Este campo deve ser preenchido.
+                    </div>
+                 </div>
+              </div>
+              <div class="form-group row">
+                 <label for="endereco" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço</label>
+                 <div class="col-lg-10">
+                    <input type="text" class="form-control form-control-sm" name="endereco" id="endereco">
+                    <div class="invalid-feedback">
+                       Este campo deve ser preenchido.
+                    </div>
+                 </div>
+              </div>
+           </fieldset>
+
+           <fieldset>
+              <legend class="font-weight-bold text-center p-3" id="somefdp">Informações de Cobrança</legend>
+
+              <div class="form-group row">
+                 <label for="passeio" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Passeio</label>
+                 <div class="col-lg-10">
+                    <select class="form-control form-control-sm" name="passeio" id="passeio">
+                       <option value="">-- Selecione um passeio --</option>
+                       <option value="1">Ciclovia</option>
+                       <option value="2">Copacabana</option>
+                       <option value="3">Cristo Redentor</option>
+                       <option value="4">Arcos da Lapa</option>
+                       <option value="5">Pão de Açucar</option>
+                       <option value="6">Maracanã</option>
+                    </select>
+                 </div>
+              </div>
+
+              <div class="form-group row">
+                 <label for="passeios" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Passeios</label>
+                 <div class="col-lg-10">
+                    <select class="form-control form-control-sm" size="5" name="passeios" id="passeios">
+                       <option value="1">Ciclovia</option>
+                       <option value="2">Copacabana</option>
+                       <option value="3">Cristo Redentor</option>
+                       <option value="4">Arcos da Lapa</option>
+                       <option value="5">Pão de Açucar</option>
+                       <option value="6">Maracanã</option>
+                    </select>
+                 </div>
+              </div>
+
+              <div class="form-group row">
+                 <label class="col-form-label col-lg-2 text-lg-right font-weight-bold">Excursões</label>
+                 <div class="col-lg-10">
+                    <div class="form-check">
+                       <input type="checkbox" class="form-check-input" name="ilha" id="ilha">
+                       <label class="form-check-label" for="ilha">Ilha Grande</label>
+                    </div>
+                    <div class="form-check">
+                       <input type="checkbox" class="form-check-input" name="paraty" id="paraty">
+                       <label class="form-check-label" for="paraty">Paraty</label>
+                    </div>
+                    <div class="form-check">
+                       <input type="checkbox" class="form-check-input" name="buzios" id="buzios">
+                       <label class="form-check-label" for="buzios">Buzios e Arraial do Cabo</label>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="form-group row">
+                 <div class="col-lg-10 offset-lg-2">
+                    <button type="button" class="btn btn-primary" id="submitbtn" >Enviar</button>
+                 </div>
+              </div>
+           </fieldset>
+        </form>
+     </div>
+
+   </div>
+   <footer class="footer">
+      <div class="container">
+         <div class="text-center">
+            <h5>© 2019. Aqua Store® é uma marca de Lucas de Castro Lopes.</h5>
+
+         </div>
+      </div>
+   </footer>
+
+   <script src="assets/js/jquery-3.3.1.js"></script>
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.js"></script>
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/jquery-ui.min.js"></script>
+</body>
+
+</html>
