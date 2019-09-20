@@ -3,41 +3,48 @@
 $(function () {
    $('[data-toggle="tooltip"]').tooltip();
    $('[data-toggle="popover"]').popover();
-   /*
+   
       $("#submitbtn").click(function(){
           //alert("consegui");
-          $("#nome").validate();   
+          $("#nome").addClass("is-invalid");   
           $("#sexo-masc").addClass("is-invalid");
           $("#sexo-fem").addClass("is-invalid");
           $("#endereco").addClass("is-invalid");
+          $("#sexo-feedback").show(10,"invalid-feedback");
+
       })
-   */
-
-   $("#cadastro").validate({
-      rules: {
-         nome: "required",
-         sexo:{
-            required: function () {
-               return $('[name="sexo"]:checked').length === 0;
-            }
-         },
-         endereco: "required",
-         
-      },
-      errorPlacement: function (error, element) {
-         if (element.is(":radio")) {
-            error.appendTo('#erro-sexo');
-         }
-         else { // This is the default behavior 
-            error.insertAfter(element);
-         }
-      },
-      submitHandler: function (form) {
-         form.submit();
-      }
-   });
-
 })
 
+//checkbox do formulário de cartão de crédito
+$(function () {
+   $("#chk-formcard").click(function(){
+      if($(this).is(":checked")){
+         $("#creditcard").prop("disabled",true);
+         $("#chk-end").prop("disabled",true);
+         $("#num-card").attr("disabled", "disabled");
+         $("#cvv").attr("disabled", "disabled");
+         $("#endereco-cob").attr("disabled", "disabled");
+         $("#expiration").attr("disabled", "disabled");
+      } else {
+         $("#creditcard").prop("disabled",false);
+         $("#chk-end").prop("disabled",false);
+         $("#num-card").removeAttr("disabled");
+         $("#cvv").removeAttr("disabled");
+         $("#endereco-cob").removeAttr("disabled");
+         $("#expiration").removeAttr("disabled");
+      }
+   })
+})
+
+$(function () {
+   $("#chk-end").click(function(){
+      if($(this).is(":checked")){
+         $("#endereco-cob").attr("disabled", "disabled");
+      } else {
+         $("#endereco-cob").removeAttr("disabled");
+         $("#endereco-cob").focus();
+      }
+   })
+})
 
 

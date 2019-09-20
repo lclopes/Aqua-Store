@@ -7,7 +7,7 @@
    <link href="assets/css/bootstrap.css" rel="stylesheet">
    <link href="assets/css/all.css" rel="stylesheet">
    <link href="assets/css/styles.css" rel="stylesheet">
-   
+
    <title>Aqua Store</title>
 </head>
 
@@ -17,8 +17,8 @@
          <a class="navbar-brand" href="index.html">
             <img src="assets/images/water-icon.png" style="width: 105px;" alt="Aqua Store">
          </a>
-         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false"
-            aria-label="Botão de navegação">
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu" aria-controls="menu"
+            aria-expanded="false" aria-label="Botão de navegação">
             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="menu">
@@ -54,7 +54,7 @@
          </div>
       </div>
    </nav>
-   
+
    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner shadow">
          <div class="carousel-item active">
@@ -69,111 +69,132 @@
    </div>
 
    <!-- inserir modal aqui-->
-   
+
 
    <div class="container bg-white shadow-lg p-3">
       <!--TODO-->
 
       <div class="modal-body">
-        <form id="form  cadastro" action="">
-           <fieldset>
-              <legend class="font-weight-bold text-center p-3" >Informações Pessoais</legend>
-              <div class="form-group row">
-                 <label for="nome" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Nome</label>
-                 <div class="col-lg-10">
-                    <input required type="text" class="form-control form-control-sm" placeholder="Informe seu nome" name="nome" id="nome" required>
-                    <div class="invalid-feedback">
-                       Este campo deve ser preenchido.
-                    </div>
-                 </div>
-              </div>
+         <form id="form  cadastro" action="">
+            <fieldset>
+               <legend class="font-weight-bold text-center p-3">Informações Pessoais</legend>
+               <div class="form-group row">
+                  <label for="nome" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Nome</label>
+                  <div class="col-lg-10">
+                     <input required type="text" class="form-control form-control-sm" placeholder="Informe seu nome"
+                        name="nome" id="nome" required>
+                     <div class="invalid-feedback">
+                        Este campo deve ser preenchido.
+                     </div>
+                  </div>
+               </div>
 
-              <div class="form-group row">
-                 <label for="sexo" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Sexo</label>
-                 <div class="col-lg-10">
-                    <div class="form-check">
-                       <input type="radio" class="form-check-input" name="sexo" id="sexo-masc" value="M">
-                       <label class="form-check-label" for="sexo-masc">Masculino</label>
-                    </div>
-                    <div class="form-check">
-                       <input type="radio" class="form-check-input" name="sexo" id="sexo-fem" value="F">
-                       <label class="form-check-label" for="sexo-fem">Feminino</label>
-                    </div>
-                    <b id="erro-sexo"></b>
-                    <div id="sexo-feedback" class="invalid-feedback">
-                       Este campo deve ser preenchido.
-                    </div>
-                 </div>
-              </div>
-              <div class="form-group row">
-                 <label for="endereco" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço</label>
-                 <div class="col-lg-10">
-                    <input type="text" class="form-control form-control-sm" name="endereco" id="endereco">
-                    <div class="invalid-feedback">
-                       Este campo deve ser preenchido.
-                    </div>
-                 </div>
-              </div>
-           </fieldset>
+               <div class="form-group row">
+                  <label for="sexo" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Sexo</label>
+                  <div class="col-lg-10">
+                     <div class="form-check">
+                        <input type="radio" class="form-check-input" name="sexo" id="sexo-masc" value="M">
+                        <label class="form-check-label" for="sexo-masc">Masculino</label>
+                     </div>
+                     <div class="form-check">
+                        <input type="radio" class="form-check-input" name="sexo" id="sexo-fem" value="F">
+                        <label class="form-check-label" for="sexo-fem">Feminino</label>
+                     </div>
+                     <b id="erro-sexo"></b>
+                     <div id="sexo-feedback" class="invalid-feedback">
+                        Este campo deve ser preenchido.
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group row">
+                  <label for="endereco" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço para
+                     entregas</label>
+                  <div class="col-lg-10">
+                     <input type="text" class="form-control form-control-sm" name="endereco" id="endereco">
+                     <div class="invalid-feedback">
+                        Este campo deve ser preenchido.
+                     </div>
+                  </div>
+               </div>
+            </fieldset>
 
-           <fieldset>
-              <legend class="font-weight-bold text-center p-3" id="somefdp">Informações de Cobrança</legend>
+            <fieldset>
+               <legend class="font-weight-bold text-center p-3" id="somefdp">Informações de Cobrança</legend>
+               <h5 class="font-weight-bold text-center p-3">
+                  <input type="checkbox" name="chk-formcard" id="chk-formcard"> Não possuo cartão de crédito</input>
+               </h5>
+               <div id="form-cartao">
+                  <div class="form-group row">
+                     <label for="creditcard" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Cartão de
+                        Crédito</label>
+                     <div class="col-lg-10">
+                        <select class="form-control form-control-sm" name="creditcard" id="creditcard">
+                           <option value="">-- Selecione a bandeira do seu cartão de crédito --</option>
+                           <option value="1">Visa</option>
+                           <option value="2">MasterCard</option>
+                           <option value="3">Elo</option>
+                        </select>
+                     </div>
+                  </div>
 
-              <div class="form-group row">
-                 <label for="passeio" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Passeio</label>
-                 <div class="col-lg-10">
-                    <select class="form-control form-control-sm" name="passeio" id="passeio">
-                       <option value="">-- Selecione um passeio --</option>
-                       <option value="1">Ciclovia</option>
-                       <option value="2">Copacabana</option>
-                       <option value="3">Cristo Redentor</option>
-                       <option value="4">Arcos da Lapa</option>
-                       <option value="5">Pão de Açucar</option>
-                       <option value="6">Maracanã</option>
-                    </select>
-                 </div>
-              </div>
+                  <div class="form-group row">
+                     <label for="num-card" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Número do
+                        Cartão</label>
+                     <div class="col-lg-10">
+                        <input type="text" class="form-control form-control-sm" name="num-card" id="num-card"
+                           maxlength="19" size="19">
+                        <div class="invalid-feedback">
+                           Este campo deve ser preenchido.
+                        </div>
+                     </div>
+                  </div>
 
-              <div class="form-group row">
-                 <label for="passeios" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Passeios</label>
-                 <div class="col-lg-10">
-                    <select class="form-control form-control-sm" size="5" name="passeios" id="passeios">
-                       <option value="1">Ciclovia</option>
-                       <option value="2">Copacabana</option>
-                       <option value="3">Cristo Redentor</option>
-                       <option value="4">Arcos da Lapa</option>
-                       <option value="5">Pão de Açucar</option>
-                       <option value="6">Maracanã</option>
-                    </select>
-                 </div>
-              </div>
+                  <div class="form-group row">
+                     <label for="cvv" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Código de
+                        segurança</label>
+                     <div class="col-lg-10">
+                        <input type="text" class="form-control form-control-sm" name="cvv" id="cvv" maxlength="3"
+                           size="3">
+                        <div class="invalid-feedback">
+                           Este campo deve ser preenchido.
+                        </div>
+                     </div>
+                  </div>
 
-              <div class="form-group row">
-                 <label class="col-form-label col-lg-2 text-lg-right font-weight-bold">Excursões</label>
-                 <div class="col-lg-10">
-                    <div class="form-check">
-                       <input type="checkbox" class="form-check-input" name="ilha" id="ilha">
-                       <label class="form-check-label" for="ilha">Ilha Grande</label>
-                    </div>
-                    <div class="form-check">
-                       <input type="checkbox" class="form-check-input" name="paraty" id="paraty">
-                       <label class="form-check-label" for="paraty">Paraty</label>
-                    </div>
-                    <div class="form-check">
-                       <input type="checkbox" class="form-check-input" name="buzios" id="buzios">
-                       <label class="form-check-label" for="buzios">Buzios e Arraial do Cabo</label>
-                    </div>
-                 </div>
-              </div>
+                  <div class="form-group row">
+                     <label for="expiration" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Data de
+                        vencimento do cartão</label>
+                     <div class="col-lg-10">
+                        <input type="text" class="form-control form-control-sm" name="expiration" id="expiration"
+                           maxlength="5" size="5">
+                        <div class="invalid-feedback">
+                           Este campo deve ser preenchido.
+                        </div>
+                     </div>
+                  </div>
 
-              <div class="form-group row">
-                 <div class="col-lg-10 offset-lg-2">
-                    <button type="button" class="btn btn-primary" id="submitbtn" >Enviar</button>
-                 </div>
-              </div>
-           </fieldset>
-        </form>
-     </div>
+                  <div class="form-group row">
+                     <label for="endereco" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço de
+                        cobrança</label>
+                     <div class="col-lg-10">
+                        <input type="checkbox" name="chk-end" id="chk-end"> Igual ao endereço para entregas</input>
+                        <br>
+                        <input type="text" class="form-control form-control-sm" name="endereco-cob" id="endereco-cob">
+                        <div class="invalid-feedback">
+                           Este campo deve ser preenchido.
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="form-group row">
+                     <div class="col-lg-10 offset-lg-2">
+                        <button type="button" class="btn btn-primary" id="submitbtn">Enviar</button>
+                     </div>
+                  </div>
+               </div>
+            </fieldset>
+         </form>
+      </div>
 
    </div>
    <footer class="footer">
@@ -190,6 +211,7 @@
    <script src="assets/js/bootstrap.js"></script>
    <script src="assets/js/script.js"></script>
    <script src="assets/js/jquery-ui.min.js"></script>
+   <script src="js/form-validation.js"></script>
    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
 </body>
 
