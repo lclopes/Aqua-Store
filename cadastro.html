@@ -149,8 +149,8 @@
                   <div class="form-group row">
                      <label for="creditcard" class="col-form-label col-lg-2 text-lg-right font-weight-bold">Bandeira</label>
                      <div class="col-lg-10">
-                        <select class="form-control form-control-sm" name="creditcard" id="creditcard">
-                           <option value="">-- Selecione a bandeira do seu cartão de crédito --</option>
+                        <select class="form-control form-control-sm" name="creditcard" id="creditcard" >
+                           <option value="-1">-- Selecione a bandeira do seu cartão de crédito --</option>
                            <option value="1">Visa</option>
                            <option value="2">MasterCard</option>
                            <option value="3">Elo</option>
@@ -162,7 +162,7 @@
                      <label for="num-card" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Número do
                         Cartão</label>
                      <div class="col-lg-10">
-                        <input type="text" class="form-control form-control-sm" name="num-card" id="num-card"
+                        <input type="text" class="form-control form-control-sm" name="num-card" id="num-card"  placeholder="Informe o número do seu cartão de crédito"
                            maxlength="19" size="19">
                         <div class="invalid-feedback">
                            Este campo deve ser preenchido.
@@ -174,7 +174,7 @@
                      <label for="cvv" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Código de
                         segurança</label>
                      <div class="col-lg-10">
-                        <input type="text" class="form-control form-control-sm" name="cvv" id="cvv" maxlength="3"
+                        <input type="text" class="form-control form-control-sm" name="cvv" id="cvv" maxlength="3"  placeholder="Informe o código de segurança encontrado no verso do cartão"
                            size="3">
                         <div class="invalid-feedback">
                            Este campo deve ser preenchido.
@@ -186,7 +186,7 @@
                      <label for="expiration" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Data de
                         vencimento do cartão</label>
                      <div class="col-lg-10">
-                        <input type="text" class="form-control form-control-sm" name="expiration" id="expiration"
+                        <input type="text" class="form-control form-control-sm" name="expiration" id="expiration"  placeholder="Informe a data de vencimento do cartão"
                            maxlength="5" size="5">
                         <div class="invalid-feedback">
                            Este campo deve ser preenchido.
@@ -195,12 +195,12 @@
                   </div>
 
                   <div class="form-group row">
-                     <label for="endereco" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço de
+                     <label for="endereco-cob" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Endereço de
                         cobrança</label>
                      <div class="col-lg-10">
                         <input type="checkbox" name="chk-end" id="chk-end"> Igual ao endereço para entregas</input>
                         <br>
-                        <input type="text" class="form-control form-control-sm" name="endereco-cob" id="endereco-cob">
+                        <input type="text" class="form-control form-control-sm" name="endereco-cob" id="endereco-cob"  placeholder="Informe o endereço de cobrança do cartão">
                         <div class="invalid-feedback">
                            Este campo deve ser preenchido.
                         </div>
