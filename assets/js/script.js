@@ -4,7 +4,10 @@ $(function () {
    $('[data-toggle="tooltip"]').tooltip();
    $('[data-toggle="popover"]').popover();
    
-      $("#submitbtn").click(function(){
+})
+
+/*
+      ($("#submitbtn").click(function(){
           //alert("consegui");
           $("#nome").addClass("is-invalid");   
           $("#sexo-masc").addClass("is-invalid");
@@ -12,8 +15,29 @@ $(function () {
           $("#endereco").addClass("is-invalid");
           $("#sexo-feedback").show(10,"invalid-feedback");
 
-      })
-})
+      }) */
+
+      /*
+$(document).ready(function(){
+   $('#form-cadastro input[type="text"]').blur(function(){
+      if(!$(this).val()){
+          $(this).addClass("is-invalid");
+      } else{
+          $(this).removeClass("is-invalid");
+      }
+  });
+})*/
+
+// $(function(){   
+//    $("#submitbtn").submit(function(){
+//       var valid = true;
+//       $(this).remove("is-invalid");
+//       if(!$("#nome").val()){
+//          valid = false;
+//          $(this).addClass("is-invalid");
+//       }
+//    })
+// })
 
 //checkbox do formulário de cartão de crédito
 $(function () {
@@ -46,5 +70,38 @@ $(function () {
       }
    })
 })
+
+$('#submitbtn').on('click',function()
+{
+   if($('#nome').val()) {
+      $('#nome').removeClass("is-invalid");
+   }
+   if(!$('#nome').val()) {
+      $('#nome').addClass("is-invalid");
+      $('#nome').focus();
+   }
+   if($('#email').val()) {
+      $('#email').removeClass("is-invalid");
+   }
+   if(!$('#email').val()) {
+      $('#email').addClass("is-invalid");
+      $('#email').focus();
+   }
+   if($('#phone').val()) {
+      $('#phone').removeClass("is-invalid");
+   }
+   if(!$('#phone').val()) {
+      $('#phone').addClass("is-invalid");
+      $('#phone').focus();
+   }
+
+   if($('#endereco').val()) {
+      $('#endereco').removeClass("is-invalid");
+   }
+   if(!$('#endereco').val()) {
+      $('#endereco').addClass("is-invalid");
+      $('#endereco').focus();
+   }
+});
 
 
