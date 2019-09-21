@@ -60,6 +60,7 @@ $(function () {
    })
 })
 
+//checkbox de endereço de cobrança
 $(function () {
    $("#chk-end").click(function(){
       if($(this).is(":checked")){
@@ -71,6 +72,8 @@ $(function () {
    })
 })
 
+//ESSE PEDAÇO ESTÁ VALIDANDO ESSES CAMPOS AO CLICAR EM ENVIAR
+//FALTA MELHORAR UM POUCO ESSE CÓDIGO, MAS A VALIDAÇÃO ATÉ QUE FUNCIONA
 $('#submitbtn').on('click',function()
 {
    if($('#nome').val()) {
