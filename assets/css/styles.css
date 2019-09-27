@@ -106,3 +106,30 @@
       /*display: none;*/
    }
 }
+
+/* styles for like/dislike buttons */
+.like, .dislike {
+   display: inline-block;
+   margin-bottom: 0;
+   font-weight: normal;
+   text-align: center;
+   vertical-align: middle;
+   cursor: pointer;
+   border: 1px solid transparent;
+   white-space: nowrap;
+   padding: 6px 12px;
+   font-size: 14px;
+   line-height: 1.428571429;
+   border-radius: 4px;
+}
+
+.qtd1 {
+   border: none;
+   width:20px;
+   background: transparent;
+}
+.qtd2 {
+   border: none;
+   width:20px;
+   background: transparent;
+}
