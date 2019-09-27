@@ -28,16 +28,16 @@ if(!$(this).val()){
 });
 })*/
 
-// $(function(){   
-//    $("#submitbtn").submit(function(){
-//       var valid = true;
-//       $(this).remove("is-invalid");
-//       if(!$("#nome").val()){
-//          valid = false;
-//          $(this).addClass("is-invalid");
-//       }
-//    })
-// })
+$(function(){   
+    $("#submitbtn").submit(function(){
+       var valid = true;
+       $(this).remove("is-invalid");
+       if(!$("#nome").val()){
+          valid = false;
+          $(this).addClass("is-invalid");
+       }
+    })
+})
 
 //checkbox do formulário de cartão de crédito
 $(function () {
@@ -97,22 +97,21 @@ $('#submitbtn').on('click', function () {
       $('#phone').focus();
    }
 
-   if(!$("#sexo").is(":checked")){
+   if(!$("input[name=sexo]").is(":checked")){
       $('#sexo-masc').addClass("is-invalid");
       $('#sexo-fem').addClass("is-invalid");
-      $('#sexo').addClass("is-invalid");
    }   
-   if($("#sexo").is(":checked")){
+   if($("input[name=sexo]").is(":checked")){
       $('#sexo-masc').removeClass("is-invalid");
       $('#sexo-fem').removeClass("is-invalid");
-      $('#sexo').removeClass("is-invalid");
    }
    
 
-   if(!$("#creditcard").find(":selected").val() == -1){
+   if($("#creditcard").val() == -1 && !$("#chk-formcard").is(":checked")){
       $('#creditcard').addClass("is-invalid");
-   }   
-
+   } if($("#creditcard").val() != -1){
+      $('#creditcard').removeClass("is-invalid");
+   }
 
    if ($('#endereco').val()) {
       $('#endereco').removeClass("is-invalid");

@@ -113,7 +113,7 @@
 
                <div class="form-group row">
                   <label for="sexo" class="col-form-label col-lg-2  text-lg-right font-weight-bold">Sexo</label>
-                  <div class="col-lg-10">
+                  <div class="col-lg-10" id="radiosexo">
                      <div class="form-check">
                         <input type="radio" class="form-check-input" name="sexo" id="sexo-masc" value="M">
                         <label class="form-check-label" for="sexo-masc">Masculino</label>
@@ -122,8 +122,7 @@
                         <input type="radio" class="form-check-input" name="sexo" id="sexo-fem" value="F">
                         <label class="form-check-label" for="sexo-fem">Feminino</label>
                      </div>
-                     <b id="erro-sexo"></b>
-                     <div id="sexo-feedback" class="invalid-feedback">
+                     <div class="invalid-feedback">
                         Este campo deve ser preenchido.
                      </div>
                   </div>
@@ -155,6 +154,9 @@
                            <option value="2">MasterCard</option>
                            <option value="3">Elo</option>
                         </select>
+                        <div class="invalid-feedback">
+                           Este campo deve ser preenchido.
+                        </div>
                      </div>
                   </div>
 
